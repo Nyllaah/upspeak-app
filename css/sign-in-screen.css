@@ -1,7 +1,7 @@
 body {
-    background-color: #F5C620;
+    background-color: rgb(245, 198, 32);
     font-family: 'Inter', sans-serif;
-    color: #FFF;
+    color: white;
     font-weight: 700;
     font-size: 14px;
     margin-right: 0px;
@@ -21,7 +21,7 @@ header {
     height: 37px;
     align-items: center;
     border-radius: 10px;
-    background: #FFF;
+    background: white;
 }
 
 #login-btn {
@@ -33,8 +33,8 @@ header {
     align-items: center;
     border-style: none;
     border-radius: 10px;
-    background-color: #FFF;
-    color: #F5C620;
+    background-color: white;
+    color: rgb(245, 198, 32);
     font-weight: 700;
     font-family: 'Inter', sans-serif;
 }
@@ -45,14 +45,14 @@ header {
     padding: 10px;
     border-style: none;
     border-radius: 10px;
-    background-color: #A134F6;
-    color: #FFF;
+    background-color: rgb(161, 52, 246);
+    color: white;
     font-weight: 700;
     font-family: 'Inter', sans-serif;
 }
 
 hr {
-    border-top: 1px solid #FFF;
+    border-top: 1px solid white;
     width: 100%;
     margin-top: 8px;
 }
@@ -76,7 +76,7 @@ h1 {
     width: 241px;
     height: 80px;
     flex-direction: column;
-    color: #A134F6;
+    color: rgb(161, 52, 246);
     font-size: 40px;
     font-style: normal;
     font-weight: 900;
@@ -97,7 +97,7 @@ form {
     padding-left: 10px;
     align-items: center;
     border-radius: 10px;
-    background-color: #FFF;
+    background-color: white;
     margin-bottom: 5px;
 }
 input , #country-codes{
@@ -108,12 +108,12 @@ input , #country-codes{
 
 #country-codes , #phone-input {
     width: 50px;
-    background: #FFF;
+    background: white;
 }
 
 #phone-input {
     width: auto;
-    background: #FFF;
+    background: white;
     margin-left: 10px;
 }
 
@@ -122,9 +122,9 @@ input , #country-codes{
     height: 36px;
     border-width: 0px;
     border-radius: 10px;
-    background-color: #A134F6;
+    background-color: rgb(161, 52, 246);
     margin-top: 45px;
-    color: #FFF;
+    color: white;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;

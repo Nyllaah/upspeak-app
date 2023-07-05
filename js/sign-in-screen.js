@@ -5,9 +5,9 @@ function switchBtn() {
     if (signInBtn.style.backgroundColor = '#A134F6') {
         signInBtn.style.backgroundColor = '#FFF';
         signInBtn.style.color = '#F5C620';
-    } else {
+    } else if (signInBtn.style.backgroundColor = '#FFF') {
         signInBtn.style.backgroundColor = '#A134F6';
-        signInBtn.style.color = '#FFF';
+        signInBtn.style.color = '#F5C620';
     }
 }
 
