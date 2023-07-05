@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self-Immersion - By UPSPEAK®</title>
     <link rel="stylesheet" href="/css/sign-in-screen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -15,20 +18,31 @@
         <hr>
     </header>
     <main>
-        <section>
+        <section id="title-container">
             <h1>Welcome to UPSPEAK®!</h1>
             <span>Get started in only a few minutes:</span>
         </section>
-        <section>
-            <input type="text" placeholder="Full name">
-            <input type="number" name="" id="" placeholder="Phone number">
-            <input type="email" name="" id="" placeholder="Email">
-            <input type="password" placeholder="New password">
-            <input type="password" placeholder="Confirm password">
-        </section>
-        <section>
-            <button>Let’s go up!</button>
-        </section>
+        <form>
+            <div class="input">
+                <input type="text" placeholder="Full name" required>
+            </div>
+            <div class="input">
+                <select name="" id="country-codes">
+                    <option value="+55">+55</option required>
+                </select>
+                <input type="text" name="" id="phone-input" placeholder="Phone number" required>
+            </div>
+            <div class="input">
+                <input type="email" name="" id="" placeholder="Email">
+            </div>
+            <div class="input">
+                <input type="password" placeholder="New password">
+            </div>
+            <div class="input">
+                <input type="password" placeholder="Confirm password">
+            </div>
+            <button type="submit" id="submit-btn">Let’s go up!</button>
+        </form>
     </main>
     <footer>
 
