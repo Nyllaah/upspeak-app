@@ -1,7 +1,27 @@
-const logInBtn = document.querySelector('#login-btn');
-const signInBtn = document.querySelector('#sign-in-btn');
+function switchBtnColor() {
+    const switches = document.querySelectorAll('.switch');
+    for (let i = 0; i < switches.length; i++) {
+        switches[i].addEventListener('click', (e) => {
+            const selected = document.querySelector('.selected');
+            if (selected) {
+                selected.classList.remove('selected');
+            }
+            e.target.classList.add('selected'); 
+        })
+    }
+    e.target.className.add('selected');
+}
 
-signInBtn.addEventListener('click', (e) => {
-    e.target.classList.add('selected')
-    if (e.target.style.backgroundColor = white)
-})
+function hideInputs() {
+    
+}
+
+function switchScreens() {
+    switchBtnColor();
+    
+
+}
+
+switchScreens();
+
+
