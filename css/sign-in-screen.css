@@ -96,10 +96,14 @@ form {
     background: #FFF;
     margin-bottom: 5px;
 }
-input , #country-codes{
+input , #country-codes {
     width: 300px;
     border: none;
     height: 30px;
+}
+
+input:focus {
+    outline: none;
 }
 
 #country-codes , #phone-input {
