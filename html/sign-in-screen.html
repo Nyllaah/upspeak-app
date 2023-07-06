@@ -12,8 +12,8 @@
 <body>
     <header>
         <div id="login-btn-bg">
-            <button id="login-btn">Log In</button>
-            <button id="sign-in-btn">Sign In</button>
+            <button id="login-btn" class="switch">Log In</button>
+            <button id="sign-in-btn" class="switch selected">Sign In</button>
         </div>
         <hr>
     </header>
@@ -33,10 +33,10 @@
                 <input type="text" name="" id="phone-input" placeholder="Phone number" required>
             </div>
             <div class="input">
-                <input type="email" name="" id="" placeholder="Email">
+                <input type="email" name="" id="email-input" placeholder="Email">
             </div>
             <div class="input">
-                <input type="password" placeholder="New password">
+                <input type="password" placeholder="Password" id="password-input">
             </div>
             <div class="input">
                 <input type="password" placeholder="Confirm password">
@@ -48,4 +48,5 @@
 
     </footer>
 </body>
+<script src="/js/sign-in-screen.js"></script>
 </html>
