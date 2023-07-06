@@ -1,0 +1,15 @@
+{
+  "name": "upspeak-app",
+  "version": "1.0.0",
+  "description": "This repository holds everything from the development of my English course app. This is a personal project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.0"
+  }
+}
