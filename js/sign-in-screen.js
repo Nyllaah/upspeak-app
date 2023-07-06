@@ -32,3 +32,12 @@ function switchScreens() {
 
 switchScreens();
 
+function populateCountryCodes() {
+    const dropdown = document.querySelector('#country-codes');
+    for (let i = 0; i < length; i++) {
+        let newOpt = dropdown.appendChild('option');
+        newOpt.innerText = `${countryCodes[i].name} ${code}`
+    }
+}
+
+populateCountryCodes();
