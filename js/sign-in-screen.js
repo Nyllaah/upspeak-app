@@ -1,4 +1,4 @@
-const countryCodes = require('./data/country-codes.json');
+// const countryCodes = require('./data/country-codes.json');
 
 const switches = document.querySelectorAll('.switch');
 const logInBtn = document.querySelector('#login-btn');
@@ -49,5 +49,3 @@ function populateCountryCodes() {
 }
 
 populateCountryCodes();
-
-module.exports = switchScreens();
