@@ -1,4 +1,5 @@
-const countryCodes = require('/js/data/country-codes.json');
+const countryCodes = require('./data/country-codes.json');
+
 const switches = document.querySelectorAll('.switch');
 const logInBtn = document.querySelector('#login-btn');
 const inputs = document.querySelectorAll('.input');
