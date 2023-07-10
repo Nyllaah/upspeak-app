@@ -1,3 +1,4 @@
+// const countryCodes = require('./country-codes');
 const countryCodes = [
   { "code": "+93", "name": "Afghanistan" },
   { "code": "+355", "name": "Albania" },
@@ -221,7 +222,7 @@ const countryCodes = [
   { "code": "+967", "name": "Yemen" },
   { "code": "+260", "name": "Zambia" },
   { "code": "+263", "name": "Zimbabwe" }
-]
+];
 
 const switches = document.querySelectorAll('.switch');
 const logInBtn = document.querySelector('#login-btn');
@@ -265,15 +266,16 @@ function switchScreens() {
 switchScreens();
 
 function populateCountryCodes() {
-  for (let i = 0; i < countryCodes.length; i++) {
-    let newOtpGroup = document.createElement('optgroup');
-    newOtpGroup.label = countryCodes[i].name;
-    dropdown.appendChild(newOtpGroup);
-    let newOpt = document.createElement('option')
-    newOpt.innerText = countryCodes[i].code
-    newOpt.value = countryCodes[i].code;
-    newOtpGroup.appendChild(newOpt);
-  }
+    countryCodes.forEach(country => {
+      let newOtpGroup = document.createElement('optgroup');
+      newOtpGroup.label = country.name;
+      dropdown.appendChild(newOtpGroup);
+      let newOpt = document.createElement('option');
+      newOpt.innerText = country.code;
+      newOpt.value = country.code;
+      newOtpGroup.appendChild(newOpt);
+    });
 }
+
 
 populateCountryCodes();
