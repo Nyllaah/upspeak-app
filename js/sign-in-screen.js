@@ -1,3 +1,4 @@
+const countryCodes = require('/js/data/country-codes.json');
 const switches = document.querySelectorAll('.switch');
 const logInBtn = document.querySelector('#login-btn');
 const inputs = document.querySelectorAll('.input');
@@ -17,14 +18,14 @@ function hideInputs(ev) {
         inputs[i].firstElementChild.required = false;
       }
     }
-    } else {
-      for (let i = 0; i < inputs.length; i++) {
-        if (inputs[i].firstElementChild.id !== 'email-input' && inputs[i].firstElementChild.id !== 'password-input') {
-          inputs[i].style.display = '';
-          inputs[i].firstElementChild.required = true;
-        }
+  } else {
+    for (let i = 0; i < inputs.length; i++) {
+      if (inputs[i].firstElementChild.id !== 'email-input' && inputs[i].firstElementChild.id !== 'password-input') {
+        inputs[i].style.display = '';
+        inputs[i].firstElementChild.required = true;
       }
     }
+  }
 }
 
 function switchScreens() {
@@ -39,11 +40,13 @@ function switchScreens() {
 switchScreens();
 
 function populateCountryCodes() {
-    const dropdown = document.querySelector('#country-codes');
-    for (let i = 0; i < length; i++) {
-        let newOpt = dropdown.appendChild('option');
-        newOpt.innerText = `${countryCodes[i].name} ${code}`
-    }
+  const dropdown = document.querySelector('#country-codes');
+  for (let i = 0; i < countryCodes.length; i++) {
+    let newOpt = dropdown.appendChild('option');
+    newOpt.innerText = `${countryCodes[i].name} ${code}`
+  }
 }
 
 populateCountryCodes();
+
+module.exports = switchScreens();
