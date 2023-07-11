@@ -251,15 +251,19 @@ const signInBtn = document.querySelector('#sign-in-btn');
 const logInInputs = document.querySelectorAll('.log-in-input');
 const signInInputs = document.querySelectorAll('.sign-in-input');
 
-function enableBtn(inputs, button) {
-  button.disabled = true;
-  
-  for (let input of inputs) {
-    if (input.value === '') {
-      button.disabled = false; 
-    }
+function enableBtn() {
+
+  for (let i = 0; logInInputs.length; i ++) {
+    logInInputs[i].addEventListener('keyup' , () => {
+      const allFilled = logInInputs.every( input, () => input.value !== '');
+      if (allFilled) {
+        logInBtn.disabled = false;
+      }
+    })
   }
 }
+
+enableBtn();
 
 function selectScreen(ev) {
   let selected = document.querySelector('.selected');
@@ -318,6 +322,6 @@ function validateLogin() {
 validateLogin()
 
 window.onload = () => {
-  enableBtn(logInInputs, logInBtn);
-  enableBtn(signInInputs, signInBtn);
+  logInBtn.disabled = true;
+  signInBtn.disabled = true;
 }
