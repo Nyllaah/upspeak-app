@@ -24,7 +24,7 @@ header {
     background: white;
 }
 
-#login-btn , #sign-in-btn {
+#log-in-swt , #sign-in-swt {
     width: 70px;
     height: 37px;
     padding: 10px;
@@ -36,7 +36,7 @@ header {
     font-family: 'Inter', sans-serif;
 }
 
-#login-btn.selected , #sign-in-btn.selected {
+#log-in-swt.selected , #sign-in-swt.selected {
     background-color: rgb(161, 52, 246);
     color: white;
 }
@@ -80,7 +80,7 @@ form {
     align-items: center;
 }
 
-.input {
+.input-container {
     display: flex;
     width: 320px;
     height: 36px;
@@ -90,6 +90,11 @@ form {
     background-color: white;
     margin-bottom: 5px;
 }
+
+#log-in-form {
+    display: none;
+}
+
 input , #country-codes {
     width: 300px;
     border: none;
@@ -111,7 +116,7 @@ input:focus {
     margin-left: 10px;
 }
 
-#submit-btn {
+#log-in-btn , #sign-in-btn {
     width: 320px;
     height: 36px;
     border-width: 0px;
@@ -122,4 +127,9 @@ input:focus {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
+}
+
+#log-in-btn:disabled , #sign-in-btn:disabled {
+    background-color: rgb(88, 36, 128);
+    color: rgb(134, 85, 172);
 }

@@ -222,4 +222,3 @@ module.exports = [
     { "code": "+260", "name": "Zambia" },
     { "code": "+263", "name": "Zimbabwe" }
   ]
-  

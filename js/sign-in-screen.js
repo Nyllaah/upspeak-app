@@ -1,3 +1,19 @@
+const users = [
+  {
+    userID: 1,
+    fullName: 'Ana Paula Lacerda',
+    number: '1234567890',
+    email: 'nylla.g@hotmail.com',
+    password: 'senha123'
+  },
+  {
+    userID: 2,
+    fullName: 'Maria Santos',
+    number: '0987654321',
+    email: 'maria@example.com',
+    password: '12345678'
+  },
+];
 const countryCodes = [
   { "code": "+93", "name": "Afghanistan" },
   { "code": "+355", "name": "Albania" },
@@ -224,11 +240,26 @@ const countryCodes = [
 ];
 
 const switches = document.querySelectorAll('.switch');
-const logInBtn = document.querySelector('#login-btn');
-const inputs = document.querySelectorAll('.input');
+const logInSwt = document.querySelector('#log-in-swt');
 const dropdown = document.getElementById('country-codes');
 const emailIp = document.querySelector('#email-input');
 const passwordIp = document.querySelector('#password-input');
+const signInForm = document.querySelector('#sign-in-form');
+const logInForm = document.querySelector('#log-in-form');
+const logInBtn = document.querySelector('#log-in-btn');
+const signInBtn = document.querySelector('#sign-in-btn');
+const logInInputs = document.querySelectorAll('.log-in-input');
+const signInInputs = document.querySelectorAll('.sign-in-input');
+
+function enableBtn(inputs, button) {
+  button.disabled = true;
+  
+  for (let input of inputs) {
+    if (input.value === '') {
+      button.disabled = false; 
+    }
+  }
+}
 
 function selectScreen(ev) {
   let selected = document.querySelector('.selected');
@@ -238,20 +269,12 @@ function selectScreen(ev) {
 }
 
 function hideInputs(ev) {
-  if (ev.target === logInBtn) {
-    for (let i = 0; i < inputs.length; i++) {
-      if (inputs[i].firstElementChild.id !== 'email-input' && inputs[i].firstElementChild.id !== 'password-input') {
-        inputs[i].style.display = 'none';
-        inputs[i].firstElementChild.required = false;
-      }
-    }
+  if (ev.target === logInSwt) {
+    signInForm.style.display = 'none';
+    logInForm.style.display = 'flex';
   } else {
-    for (let i = 0; i < inputs.length; i++) {
-      if (inputs[i].firstElementChild.id !== 'email-input' && inputs[i].firstElementChild.id !== 'password-input') {
-        inputs[i].style.display = '';
-        inputs[i].firstElementChild.required = true;
-      }
-    }
+    signInForm.style.display = 'flex';
+    logInForm.style.display = 'none';
   }
 }
 
@@ -282,10 +305,19 @@ populateCountryCodes();
 
 function validateLogin() {
   logInBtn.addEventListener('click',  () => {
-    for (let index = 0; index < array.length; index++) {
-      const element = array[index];
-      
-    }
-    if (emailIp.value)
+    users.some((i) => { 
+      if (emailIp.value === i.email && passwordIp.value === i.password) {
+        alert('Welcome');
+      } else {
+        alert('Invalid User');
+      }
+    })
   });
+}
+
+validateLogin()
+
+window.onload = () => {
+  enableBtn(logInInputs, logInBtn);
+  enableBtn(signInInputs, signInBtn);
 }
