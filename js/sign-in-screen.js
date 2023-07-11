@@ -1,4 +1,3 @@
-// const countryCodes = require('./country-codes');
 const countryCodes = [
   { "code": "+93", "name": "Afghanistan" },
   { "code": "+355", "name": "Albania" },
@@ -228,6 +227,8 @@ const switches = document.querySelectorAll('.switch');
 const logInBtn = document.querySelector('#login-btn');
 const inputs = document.querySelectorAll('.input');
 const dropdown = document.getElementById('country-codes');
+const emailIp = document.querySelector('#email-input');
+const passwordIp = document.querySelector('#password-input');
 
 function selectScreen(ev) {
   let selected = document.querySelector('.selected');
@@ -266,16 +267,25 @@ function switchScreens() {
 switchScreens();
 
 function populateCountryCodes() {
-    countryCodes.forEach(country => {
-      let newOtpGroup = document.createElement('optgroup');
-      newOtpGroup.label = country.name;
-      dropdown.appendChild(newOtpGroup);
-      let newOpt = document.createElement('option');
-      newOpt.innerText = country.code;
-      newOpt.value = country.code;
-      newOtpGroup.appendChild(newOpt);
-    });
+  countryCodes.forEach(country => {
+    let newOtpGroup = document.createElement('optgroup');
+    newOtpGroup.label = country.name;
+    dropdown.appendChild(newOtpGroup);
+    let newOpt = document.createElement('option');
+    newOpt.innerText = country.code;
+    newOpt.value = country.code;
+    newOtpGroup.appendChild(newOpt);
+  });
 }
 
-
 populateCountryCodes();
+
+function validateLogin() {
+  logInBtn.addEventListener('click',  () => {
+    for (let index = 0; index < array.length; index++) {
+      const element = array[index];
+      
+    }
+    if (emailIp.value)
+  });
+}
