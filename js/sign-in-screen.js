@@ -242,28 +242,14 @@ const countryCodes = [
 const switches = document.querySelectorAll('.switch');
 const logInSwt = document.querySelector('#log-in-swt');
 const dropdown = document.getElementById('country-codes');
-const emailIp = document.querySelector('#email-input');
-const passwordIp = document.querySelector('#password-input');
+const logInEmailInp = document.querySelector('#log-in-email-input');
+const logInPasswordIp = document.querySelector('#log-in-password-input');
 const signInForm = document.querySelector('#sign-in-form');
 const logInForm = document.querySelector('#log-in-form');
 const logInBtn = document.querySelector('#log-in-btn');
 const signInBtn = document.querySelector('#sign-in-btn');
 const logInInputs = document.querySelectorAll('.log-in-input');
 const signInInputs = document.querySelectorAll('.sign-in-input');
-
-function enableBtn() {
-
-  for (let i = 0; logInInputs.length; i ++) {
-    logInInputs[i].addEventListener('keyup' , () => {
-      const allFilled = logInInputs.every( input, () => input.value !== '');
-      if (allFilled) {
-        logInBtn.disabled = false;
-      }
-    })
-  }
-}
-
-enableBtn();
 
 function selectScreen(ev) {
   let selected = document.querySelector('.selected');
@@ -308,20 +294,20 @@ function populateCountryCodes() {
 populateCountryCodes();
 
 function validateLogin() {
-  logInBtn.addEventListener('click',  () => {
-    users.some((i) => { 
-      if (emailIp.value === i.email && passwordIp.value === i.password) {
-        alert('Welcome');
-      } else {
-        alert('Invalid User');
-      }
-    })
+  logInBtn.addEventListener('click',  (ev) => {
+    ev.preventDefault();
+    let valid = users.some((user) => {
+      logInEmailInp.value === user.email && logInPasswordIp.value === user.password
+    });
+    if (valid) {
+      window.location.href = './html/home.html'
+    }
   });
 }
 
 validateLogin()
 
-window.onload = () => {
-  logInBtn.disabled = true;
-  signInBtn.disabled = true;
+function saveNewUser() {
+  signInBtn.addEventListener('', () => {})
 }
+
