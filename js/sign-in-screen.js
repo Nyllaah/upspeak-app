@@ -308,6 +308,8 @@ function validateLogin() {
 validateLogin()
 
 function saveNewUser() {
-  signInBtn.addEventListener('', () => {})
+  signInBtn.addEventListener('click', () => {
+    
+  })
 }
 
