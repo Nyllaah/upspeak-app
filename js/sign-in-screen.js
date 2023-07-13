@@ -300,7 +300,7 @@ function validateLogin() {
       logInEmailInp.value === user.email && logInPasswordIp.value === user.password
     });
     if (valid) {
-      window.location.href = './html/home.html'
+      window.location.href = '/html/home.html'
     }
   });
 }
@@ -308,8 +308,19 @@ function validateLogin() {
 validateLogin()
 
 function saveNewUser() {
-  signInBtn.addEventListener('click', () => {
-    
+  signInBtn.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    let newUser = {
+      userID: users.length,
+      fullName: signInInputs[0].value,
+      number: signInInputs[1].value,
+      email: signInInputs[2].value,
+      password: signInInputs[3].value,
+    }
+    users.push(newUser);
+    window.location.href = '/html/home.html'
   })
 }
+
+saveNewUser();
 
