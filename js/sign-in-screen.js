@@ -319,7 +319,7 @@ function saveNewUser() {
     }
     users.push(newUser);
     window.location.href = '/html/home.html';
-  })
+  });
 }
 
 saveNewUser();
