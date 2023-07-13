@@ -8,9 +8,17 @@ const play7 = document.querySelector('#play7');
 const play8 = document.querySelector('#play8');
 
 function goToOnClick(button, destination) {
-    button.addEventListener('click', (ev) => {
-        ev.preventDefalt();
-        window.location.href = destination;
-    })
+  button.addEventListener('click', (ev) => {
+    ev.preventDefalt();
+    window.location.href = destination;
+  })
 }
 
+goToOnClick(play1, 'html/study-screen.html');
+goToOnClick(play2, 'html/study-screen.html');
+goToOnClick(play3, 'html/study-screen.html');
+goToOnClick(play4, 'html/study-screen.html');
+goToOnClick(play5, 'html/study-screen.html');
+goToOnClick(play6, 'html/study-screen.html');
+goToOnClick(play7, 'html/study-screen.html');
+goToOnClick(play8, 'html/study-screen.html');
