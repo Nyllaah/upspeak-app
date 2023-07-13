@@ -1,0 +1,1 @@
+const prepBtn = document.querySelector('#preparation');
